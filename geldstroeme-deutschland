@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <title>Deutschland – Staatliche Geldströme</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7f7f7;
+      color: #222;
+      margin: 0;
+      padding: 40px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 24px;
+      margin-bottom: 5px;
+    }
+
+    .subtitle {
+      text-align: center;
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 40px;
+    }
+
+    .chart {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 40px;
+    }
+
+    .data {
+      max-width: 600px;
+      margin: 0 auto;
+      font-size: 14px;
+    }
+
+    .data table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .data td {
+      padding: 6px 0;
+    }
+
+    .sources {
+      margin-top: 30px;
+      font-size: 12px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Deutschland – staatliche Geldströme</h1>
+<div class="subtitle">Offiziell gemeldete Daten · Jahr 2022</div>
+
+<div class="chart">
+<svg width="700" height="300">
+
+  <!-- Einnahmen Kreis -->
+  <circle cx="200" cy="150" r="80" fill="#d9d9d9" />
+  <text x="200" y="135" text-anchor="middle" font-size="14">Staatseinnahmen</text>
+  <text x="200" y="155" text-anchor="middle" font-size="16"><tspan font-weight="bold">1900</tspan> Mrd €</text>
+
+  <!-- Ausgaben Kreis -->
+  <circle cx="500" cy="150" r="90" fill="#bfbfbf" />
+  <text x="500" y="135" text-anchor="middle" font-size="14">Staatsausgaben</text>
+  <text x="500" y="155" text-anchor="middle" font-size="16"><tspan font-weight="bold">2100</tspan> Mrd €</text>
+
+  <!-- Pfeil ins Ausland -->
+  <line x1="290" y1="90" x2="410" y2="90" stroke="#888" stroke-width="2" marker-end="url(#arrow)" />
+  <text x="350" y="75" text-anchor="middle" font-size="12">180 Mrd € ins Ausland</text>
+
+  <!-- Pfeil aus dem Ausland -->
+  <line x1="410" y1="210" x2="290" y2="210" stroke="#888" stroke-width="2" marker-end="url(#arrow)" />
+  <text x="350" y="235" text-anchor="middle" font-size="12">160 Mrd € aus dem Ausland</text>
+
+  <!-- Pfeilspitze -->
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="6" refY="3"
+      orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#888" />
+    </marker>
+  </defs>
+
+</svg>
+</div>
+
+<div class="data">
+  <table>
+    <tr><td>Staatseinnahmen gesamt</td><td align="right">1900 Mrd €</td></tr>
+    <tr><td>Staatsausgaben gesamt</td><td align="right">2100 Mrd €</td></tr>
+    <tr><td>Zahlungen ins Ausland</td><td align="right">180 Mrd €</td></tr>
+    <tr><td>Zahlungen aus dem Ausland</td><td align="right">160 Mrd €</td></tr>
+  </table>
+
+  <div class="sources">
+    <strong>Quellen</strong><br>
+    Statistisches Bundesamt (Destatis) – Volkswirtschaftliche Gesamtrechnungen (2022)<br>
+    Bundesministerium der Finanzen – Gesamtstaatlicher Finanzbericht (2022)<br>
+    OECD – Internationale Transfers (2022)<br>
+    Deutsche Bundesbank – Zahlungsbilanz, staatlicher Sektor (2022)
+  </div>
+</div>
+
+</body>
+</html>
